@@ -26,23 +26,28 @@ button {
 
 /* Calculator number buttons (9 in total) */
 #one {
-  top:70%;
-  left:17%;
+  top:73%;
+  left:14%;
 }
 #two {
-  
+  top:76%;
+  left:37%;
 }
 #three {
-  
+  top:78%;
+  left:57%;
 }
 #four {
-  
+  top:53%;
+  left:15%;
 }
 #five {
-  
+  top:57%;
+  left:37%;
 }
 #six {
-  
+  top:57%;
+  left:59%;
 }
 #seven {
   
@@ -66,7 +71,8 @@ button {
   
 }
 #equals {
-  
+  top:80%;
+  left:78%;
 }
 
 /* End other buttons */
