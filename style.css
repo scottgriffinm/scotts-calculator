@@ -1,20 +1,67 @@
 .calculatorContainer {
-  background:black;
   position: relative;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  display: inline-block;
+  zoom:1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .calculatorBase {
   position:relative;
-    display: block;
+  display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
 button {
   position:absolute;
-  top:0;
+  top:;
   left:0;
 }
+
+
+/* Calculator number buttons (9 in total) */
+#one {
+  
+}
+#two {
+  
+}
+#three {
+  
+}
+#four {
+  
+}
+#five {
+  
+}
+#six {
+  
+}
+#seven {
+  
+}
+#eight {
+  
+}
+#nine {
+  
+}
+/* End calculator number buttons*/
+
+/* Other buttons */
+#plus {
+  
+}
+#minus {
+  
+}
+#ac {
+  
+}
+#equals {
+  
+}
+/* End other buttons
