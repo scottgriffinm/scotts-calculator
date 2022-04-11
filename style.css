@@ -73,11 +73,18 @@ button {
   left:79%;
 }
 #ac {
-  
+  top: 32%;
+  left:4%;
 }
 #equals {
   top:80%;
   left:78%;
 }
-
 /* End other buttons */
+
+#soundWaves {
+  position:absolute;
+  top:6%;
+  left:66%;
+  opacity:0;
+}
