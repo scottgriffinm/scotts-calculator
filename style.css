@@ -53,6 +53,9 @@ button {
 }
 
 
+
+
+
 /* Calculator number buttons (9 in total) */
 #one {
   top:73%;
@@ -111,9 +114,16 @@ button {
 }
 /* End other buttons */
 
+.hiddenText {
+  position:absolute;
+  opacity:0;
+}
+
+
 #soundWaves {
   position:absolute;
   top:6%;
   left:66%;
   opacity:0;
 }
+
