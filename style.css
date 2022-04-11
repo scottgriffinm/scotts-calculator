@@ -50,22 +50,27 @@ button {
   left:58%;
 }
 #seven {
-  
+  top:32%;
+  left:17%;
 }
 #eight {
-  
+  top:36%;
+  left:38%;
 }
 #nine {
-  
+  top:37%;
+  left:59%;
 }
 /* End calculator number buttons*/
 
 /* Other buttons */
 #plus {
-  
+  top:40%;
+  left:76%;
 }
 #minus {
-  
+  top:58%;
+  left:79%;
 }
 #ac {
   
