@@ -24,11 +24,13 @@
 
 .output {
   position:absolute;
-  top:20%;
-  left:40%;
-  text-align:left;
+  top:17%;
+  left:33%;
+  text-align: center;
   font-family: 'RubicPuddles', sans-serif;
-  color:red;
+  font-size: 2.5em;
+  font-weight: bold;
+  transform: rotate(7deg);
 }
 .output div {
   display:inline-block;
