@@ -84,8 +84,6 @@ class Calculator {
 }
 
 
-
-
 const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)
 
 
