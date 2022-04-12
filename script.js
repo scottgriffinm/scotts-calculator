@@ -87,17 +87,6 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-function mouseDown(el) {
-  el.style.height = "90%";
-  el.style.width = "90%";
-}
-
-function mouseUp(el) {
-  el.style.height = "100%";
-  el.style.width = "100%";
-}
-
-
 const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)
 
 
@@ -106,11 +95,6 @@ numberButtons.forEach(button => {
     calculator.appendNumber(button.innerText)
     calculator.updateDisplay()
   })
-  /*
-  button.addEventListener("mousedown",mouseDown(button))
-  button.addEventListener("mouseup",mouseUp(button))
-*/
-
 })
 
 operationButtons.forEach(button => {
