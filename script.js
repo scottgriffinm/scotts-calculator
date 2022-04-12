@@ -87,6 +87,21 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+function enlargeImg(img) {
+  // Set image size to 1.5 times original
+  img.style.transform = "scale(1.5)";
+  // Animation effect 
+  img.style.transition = "transform 0.25s ease";
+}
+// Function to reset image size
+function resetImg(img) {
+  // Set image size to original
+  img.style.transform = "scale(1)";
+  img.style.transition = "transform 0.25s ease";
+}
+
+
+
 const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)
 
 
@@ -95,6 +110,9 @@ numberButtons.forEach(button => {
     calculator.appendNumber(button.innerText)
     calculator.updateDisplay()
   })
+  img = button.children[1]
+  button.onmousedown = function() {enlargeImg(img)};
+  
 })
 
 operationButtons.forEach(button => {
