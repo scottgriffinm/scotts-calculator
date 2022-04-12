@@ -89,11 +89,12 @@ function sleep(ms) {
 
 function mouseDown(el) {
   el.style.height = "90%";
-  el.style.height = "90%";
+  el.style.width = "90%";
 }
 
-function mouseUp() {
-  document.getElementById("demo").innerHTML = "You released the mouse button.";
+function mouseUp(el) {
+  el.style.height = "100%";
+  el.style.width = "100%";
 }
 
 
@@ -104,7 +105,12 @@ numberButtons.forEach(button => {
   button.addEventListener('click', () => {
     calculator.appendNumber(button.innerText)
     calculator.updateDisplay()
-  });
+  })
+  /*
+  button.addEventListener("mousedown",mouseDown(button))
+  button.addEventListener("mouseup",mouseUp(button))
+*/
+
 })
 
 operationButtons.forEach(button => {
