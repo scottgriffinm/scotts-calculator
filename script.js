@@ -2,6 +2,7 @@ const numberButtons = document.querySelectorAll("[data-number]");
 const operationButtons = document.querySelectorAll("[data-operation]");
 const equalsButton = document.querySelector("[data-equals]");
 const allClearButton = document.querySelector("[data-all-clear]");
+
 const previousOperandTextElement = document.querySelector("[data-previous-operand]");
 const currentOperandTextElement = document.querySelector("[data-current-operand]");
 
@@ -87,9 +88,9 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-function enlargeImg(img) {
+function sizeImg(img) {
   // Set image size to 1.5 times original
-  img.style.transform = "scale(1.5)";
+  img.style.transform = "scale(.8)";
   // Animation effect 
   img.style.transition = "transform 0.25s ease";
 }
@@ -105,14 +106,15 @@ function resetImg(img) {
 const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)
 
 
+
+
 numberButtons.forEach(button => {
   button.addEventListener('click', () => {
     calculator.appendNumber(button.innerText)
     calculator.updateDisplay()
   })
-  img = button.children[1]
-  button.onmousedown = function() {enlargeImg(img)};
-  
+  button.onmousedown = function() {sizeImg(button.children[1])};
+  button.onmouseup = function() {resetImg(button.children[1])}
 })
 
 operationButtons.forEach(button => {
@@ -120,15 +122,24 @@ operationButtons.forEach(button => {
     calculator.chooseOperation(button.innerText)
     calculator.updateDisplay()
   })
+  button.onmousedown = function() {sizeImg(button.children[1])};
+  button.onmouseup = function() {resetImg(button.children[1])}
 })
+
 
 equalsButton.addEventListener('click', button => {
   calculator.compute()
   calculator.updateDisplay()
 })
+equalsButton.onmousedown = function() {sizeImg(equalsButton.children[0])};
+equalsButton.onmouseup = function() {resetImg(equalsButton.children[0])}
+
+
 
 allClearButton.addEventListener('click', button => {
   calculator.clear()
   calculator.updateDisplay()
-})
+})  
+allClearButton.onmousedown = function() {sizeImg(allClearButton.children[0])};
+allClearButton.onmouseup = function() {resetImg(allClearButton.children[0])}
 
