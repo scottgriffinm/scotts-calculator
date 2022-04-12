@@ -18,8 +18,8 @@
 
 
 @font-face {
-  font-family: 'RubicPuddles'; /* This is an arbitrary name -- whatever works for you */
-  src: url('https://cdn.glitch.global/04acdea7-933d-42b4-b887-a53010fc0bc3/RubikPuddles-Regular.ttf?v=1649696481960'); 
+  font-family: 'CalculatorFont'; 
+  src: url('https://cdn.glitch.global/04acdea7-933d-42b4-b887-a53010fc0bc3/RobotoMono-VariableFont_wght.ttf?v=1649726554180'); 
 }
 
 .output {
@@ -29,7 +29,7 @@
   width:40%;
   height:13%;
   text-align: center;
-  font-family: 'RubicPuddles', sans-serif;
+  font-family: 'CalculatorFont', sans-serif;
   font-size: 2.5em;
   font-weight: bold;
   transform: rotate(7deg);

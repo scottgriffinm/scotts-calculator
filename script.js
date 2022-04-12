@@ -13,7 +13,7 @@ class Calculator {
   }
 
   clear() {
-    this.currentOperand = "";
+    this.currentOperand = "0";
     this.previousOperand = "";
     this.operation = undefined;
   }
@@ -48,7 +48,7 @@ class Calculator {
       default:
         return
     }
-    this.currentOperand = computation
+    this.currentOperand = computation.toFixed(1)
     this.operation = undefined
     this.previousOperand = ''
   }
