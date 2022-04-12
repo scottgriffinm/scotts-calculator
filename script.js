@@ -4,6 +4,8 @@ const equalsButton = document.querySelector("[data-equals]");
 const allClearButton = document.querySelector("[data-all-clear]");
 const previousOperandTextElement = document.querySelector("[data-previous-operand]");
 const currentOperandTextElement = document.querySelector("[data-current-operand]");
+let allButtons = Array.from(numberButtons)
+allButtons = allButtons.concat(Array.from(operationButtons), equalsButton, allClearButton)
 
 
 class Calculator {
@@ -105,16 +107,16 @@ function resetImg(img) {
 
 const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)
 
-
-
+allButtons.forEach(button => {
+  button.onmousedown = function() {sizeImg(button.querySelectorAll('img')[0])}
+  button.onmouseup = function() {resetImg(button.querySelectorAll('img')[0])}
+})
 
 numberButtons.forEach(button => {
   button.addEventListener('click', () => {
     calculator.appendNumber(button.innerText)
     calculator.updateDisplay()
   })
-  button.onmousedown = function() {sizeImg(button.children[1])};
-  button.onmouseup = function() {resetImg(button.children[1])}
 })
 
 operationButtons.forEach(button => {
@@ -122,8 +124,6 @@ operationButtons.forEach(button => {
     calculator.chooseOperation(button.innerText)
     calculator.updateDisplay()
   })
-  button.onmousedown = function() {sizeImg(button.children[1])};
-  button.onmouseup = function() {resetImg(button.children[1])}
 })
 
 
@@ -131,15 +131,11 @@ equalsButton.addEventListener('click', button => {
   calculator.compute()
   calculator.updateDisplay()
 })
-equalsButton.onmousedown = function() {sizeImg(equalsButton.children[0])};
-equalsButton.onmouseup = function() {resetImg(equalsButton.children[0])}
-
 
 
 allClearButton.addEventListener('click', button => {
   calculator.clear()
   calculator.updateDisplay()
 })  
-allClearButton.onmousedown = function() {sizeImg(allClearButton.children[0])};
-allClearButton.onmouseup = function() {resetImg(allClearButton.children[0])}
+
 
