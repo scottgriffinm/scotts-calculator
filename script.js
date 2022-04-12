@@ -87,9 +87,6 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function buttonClick(button) {
-  
-}
 
 const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)
 
@@ -98,6 +95,14 @@ numberButtons.forEach(button => {
   button.addEventListener('click', () => {
     calculator.appendNumber(button.innerText)
     calculator.updateDisplay()
+  })
+  button.addEventListener('mousedown', e => {
+    button.style.height = '90%';
+    button.style.width = '90%';
+  })
+  button.addEventlistener('mouseup', e => {
+    button.style.height = '100%';
+    button.style.width = '100%';
   })
 })
 
