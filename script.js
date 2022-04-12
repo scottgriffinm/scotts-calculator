@@ -82,7 +82,14 @@ class Calculator {
 
 
 }
+/* in prog */
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 
+async function buttonClick(button) {
+  
+}
 
 const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)
 
