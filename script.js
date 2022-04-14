@@ -100,16 +100,16 @@ async function soundWavesAppearFor(ms) {
 
 // Function to change image size
 function sizeImg(img) {
-  img.style.transform = "scale(.8)";
+  img.style.transform = "scale(.90)";
   // Animation effect 
-  img.style.transition = "transform 0.25s ease";
+  img.style.transition = "transform 0.01s";
 }
 
 // Function to reset image size
 function resetImg(img) {
   // Set image size to original
   img.style.transform = "scale(1)";
-  img.style.transition = "transform 0.25s ease";
+  img.style.transition = "transform 0.01s";
 }
 
 
