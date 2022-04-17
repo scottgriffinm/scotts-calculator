@@ -14,9 +14,14 @@ var boopsNBeeps = [new Audio('https://cdn.glitch.global/04acdea7-933d-42b4-b887-
                   new Audio('https://cdn.glitch.global/04acdea7-933d-42b4-b887-a53010fc0bc3/boop4.wav?v=1650222139941'),
                   new Audio('https://cdn.glitch.global/04acdea7-933d-42b4-b887-a53010fc0bc3/beep4.wav?v=1650222125758'),
                   new Audio('https://cdn.glitch.global/04acdea7-933d-42b4-b887-a53010fc0bc3/boop5.wav?v=1650222142235'),
-                  new Audio('https://cdn.glitch.global/04acdea7-933d-42b4-b887-a53010fc0bc3/beep5.wav?v=1650222128705')]
+                  new Audio('https://cdn.glitch.global/04acdea7-933d-42b4-b887-a53010fc0bc3/beep5.wav?v=1650222128705'),
+                  new Audio('https://cdn.glitch.global/04acdea7-933d-42b4-b887-a53010fc0bc3/boop1.wav?v=1650222133758'),
+                  new Audio('https://cdn.glitch.global/04acdea7-933d-42b4-b887-a53010fc0bc3/beep1.wav?v=1650222118139'),
+                  new Audio('https://cdn.glitch.global/04acdea7-933d-42b4-b887-a53010fc0bc3/boop2.wav?v=1650222134548'),
+                  new Audio('https://cdn.glitch.global/04acdea7-933d-42b4-b887-a53010fc0bc3/beep2.wav?v=1650222120967')]
 let allButtons = Array.from(numberButtons)
 allButtons = allButtons.concat(Array.from(operationButtons), equalsButton, allClearButton)
+
 
 class CalcButton {
   constructor(button, audio) {
@@ -24,6 +29,14 @@ class CalcButton {
     this.audio = audio;
     this.play();
   }
+  
+  play() {
+    this.audio.play();
+  }
+}
+
+for (let iii = 0; iii < allButtons.length; iii++) {
+  var temp = CalcButton
 }
 
 class Calculator {
@@ -133,9 +146,10 @@ function resetImg(img) {
 const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)
 
 allButtons.forEach(button => {
-  button.onmousedown = function() {sizeImg(button.querySelectorAll('img')[0])}
-  button.onmouseup = function() {resetImg(button.querySelectorAll('img')[0])}
-  button.onclick = function() {soundWavesAppearFor(1000)}
+  button.button.onmousedown = function() {sizeImg(button.querySelectorAll('img')[0])}
+  button.button.onmouseup = function() {resetImg(button.querySelectorAll('img')[0])}
+  button.button.onclick = function() {soundWavesAppearFor(1000)}
+  button.audio.play()
 })
 
 numberButtons.forEach(button => {
@@ -161,5 +175,3 @@ allClearButton.addEventListener('click', button => {
   calculator.clear()
   calculator.updateDisplay()
 })  
-
-
