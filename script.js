@@ -5,9 +5,26 @@ const allClearButton = document.querySelector("[data-all-clear]");
 const previousOperandTextElement = document.querySelector("[data-previous-operand]");
 const currentOperandTextElement = document.querySelector("[data-current-operand]");
 const soundWaves = document.getElementById("soundWaves");
+var boopsNBeeps = [new Audio('https://cdn.glitch.global/04acdea7-933d-42b4-b887-a53010fc0bc3/boop1.wav?v=1650222133758'),
+                  new Audio('https://cdn.glitch.global/04acdea7-933d-42b4-b887-a53010fc0bc3/beep1.wav?v=1650222118139'),
+                  new Audio('https://cdn.glitch.global/04acdea7-933d-42b4-b887-a53010fc0bc3/boop2.wav?v=1650222134548'),
+                  new Audio('https://cdn.glitch.global/04acdea7-933d-42b4-b887-a53010fc0bc3/beep2.wav?v=1650222120967'),
+                  new Audio('https://cdn.glitch.global/04acdea7-933d-42b4-b887-a53010fc0bc3/boop3.wav?v=1650222137529'),
+                  new Audio('https://cdn.glitch.global/04acdea7-933d-42b4-b887-a53010fc0bc3/beep3.wav?v=1650222123230'),
+                  new Audio('https://cdn.glitch.global/04acdea7-933d-42b4-b887-a53010fc0bc3/boop4.wav?v=1650222139941'),
+                  new Audio('https://cdn.glitch.global/04acdea7-933d-42b4-b887-a53010fc0bc3/beep4.wav?v=1650222125758'),
+                  new Audio('https://cdn.glitch.global/04acdea7-933d-42b4-b887-a53010fc0bc3/boop5.wav?v=1650222142235'),
+                  new Audio('https://cdn.glitch.global/04acdea7-933d-42b4-b887-a53010fc0bc3/beep5.wav?v=1650222128705')]
 let allButtons = Array.from(numberButtons)
 allButtons = allButtons.concat(Array.from(operationButtons), equalsButton, allClearButton)
 
+class CalcButton {
+  constructor(button, audio) {
+    this.button = button;
+    this.audio = audio;
+    this.play();
+  }
+}
 
 class Calculator {
   constructor(previousOperandTextElement, currentOperandTextElement) {
@@ -111,7 +128,6 @@ function resetImg(img) {
   img.style.transform = "scale(1)";
   img.style.transition = "transform 0.01s";
 }
-
 
 
 const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)
