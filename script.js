@@ -27,16 +27,12 @@ class CalcButton {
   constructor(button, audio) {
     this.button = button;
     this.audio = audio;
-    this.play();
-  }
-  
-  play() {
-    this.audio.play();
   }
 }
 
 for (let iii = 0; iii < allButtons.length; iii++) {
-  var temp = CalcButton
+  const temp = new CalcButton(allButtons[iii],boopsNBeeps[iii])
+  allButtons[iii] = temp
 }
 
 class Calculator {
@@ -146,10 +142,10 @@ function resetImg(img) {
 const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)
 
 allButtons.forEach(button => {
-  button.button.onmousedown = function() {sizeImg(button.querySelectorAll('img')[0])}
-  button.button.onmouseup = function() {resetImg(button.querySelectorAll('img')[0])}
-  button.button.onclick = function() {soundWavesAppearFor(1000)}
-  button.audio.play()
+  button.button.onmousedown = function() {sizeImg(button.button.querySelectorAll('img')[0])}
+  button.button.onmouseup = function() {resetImg(button.button.querySelectorAll('img')[0])}
+  button.button.onclick = function() {soundWavesAppearFor(1000);
+                                     button.audio.play();}
 })
 
 numberButtons.forEach(button => {
