@@ -6,7 +6,8 @@
 .topText p {
   position: relatice;
   display: inline-block;
-  padding: 0,
+  padding-left:1em;
+  padding-right:1em;
 }
 
 .calculatorContainer {
