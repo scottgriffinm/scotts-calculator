@@ -35,7 +35,7 @@ for (let iii = 0; iii < allButtons.length; iii++) {
   allButtons[iii] = temp
 }
 
-const playMusicButton = new CalcButton(document.getElementById("playMusic"), new Audio('https://cdn.glitch.global/04acdea7-933d-42b4-b887-a53010fc0bc3/calculator%20music.wav?v=1650225150967'))
+const playMusicButton = new CalcButton(document.getElementById("playMusic"), new Audio('https://cdn.glitch.global/04acdea7-933d-42b4-b887-a53010fc0bc3/calculator%20music.wav?v=1650392910758'))
 
 
 class Calculator {
@@ -177,4 +177,7 @@ allClearButton.addEventListener('click', button => {
 
 playMusicButton.button.onmousedown = function () {sizeImg(playMusicButton.button.querySelectorAll('img')[0])}
 playMusicButton.button.onmouseup = function() {resetImg(playMusicButton.button.querySelectorAll('img')[0])}
-playMusicButton.button.onlick = function() {playMusicButton.audion.play()}
+var musicPlaying = false
+playMusicButton.button.onclick = function() {
+  if (!musicPlaying) {
+    MusicButton.audio.play();}
