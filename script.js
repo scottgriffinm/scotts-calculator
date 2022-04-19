@@ -177,7 +177,14 @@ allClearButton.addEventListener('click', button => {
 
 playMusicButton.button.onmousedown = function () {sizeImg(playMusicButton.button.querySelectorAll('img')[0])}
 playMusicButton.button.onmouseup = function() {resetImg(playMusicButton.button.querySelectorAll('img')[0])}
+
 var musicPlaying = false
 playMusicButton.button.onclick = function() {
   if (!musicPlaying) {
-    MusicButton.audio.play();}
+    playMusicButton.audio.play();
+    musicPlaying = true;}
+  else {
+    playMusicButton.audio.pause();
+    musicPlaying = false;
+  } 
+}
