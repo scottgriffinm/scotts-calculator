@@ -23,8 +23,6 @@ var boopsNBeeps = [new Audio('https://cdn.glitch.global/04acdea7-933d-42b4-b887-
 let allButtons = Array.from(numberButtons)
 allButtons = allButtons.concat(Array.from(operationButtons), equalsButton, allClearButton)
 
-
-
 class CalcButton {
   constructor(button, audio) {
     this.button = button;
@@ -36,6 +34,9 @@ for (let iii = 0; iii < allButtons.length; iii++) {
   const temp = new CalcButton(allButtons[iii],boopsNBeeps[iii])
   allButtons[iii] = temp
 }
+
+const playMusicButton = new CalcButton(document.getElementById("playMusic"), new Audio('https://cdn.glitch.global/04acdea7-933d-42b4-b887-a53010fc0bc3/calculator%20music.wav?v=1650225150967'))
+
 
 class Calculator {
   constructor(previousOperandTextElement, currentOperandTextElement) {
@@ -173,3 +174,7 @@ allClearButton.addEventListener('click', button => {
   calculator.clear()
   calculator.updateDisplay()
 })  
+
+playMusicButton.button.onmousedown = function () {sizeImg(playMusicButton.button.querySelectorAll('img')[0])}
+playMusicButton.button.onmouseup = function() {resetImg(playMusicButton.button.querySelectorAll('img')[0])}
+playMusicButton.button.onlick = function() {playMusicButton.audion.play()}
