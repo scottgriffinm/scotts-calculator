@@ -1,46 +1,105 @@
 <html>
   <head>
-  <title>Scott's Calculator :-)</title>  
-    <link href="style.css" rel="stylesheet">
-
+    <title>Scott's Calculator :-)</title>
+    <link href="style.css" rel="stylesheet" />
   </head>
   <body>
-        <script src="script.js" defer></script>
-    <!--
-<div class="headingArt">
-  <img src="https://cdn.glitch.global/04acdea7-933d-42b4-b887-a53010fc0bc3/heading%20transparent.png?v=1650304950575">
-    </div> 
- -->
-    
-<div class="calculatorContainer">
-  <img class="calculatorBase" src="https://cdn.glitch.global/04acdea7-933d-42b4-b887-a53010fc0bc3/calculatorBase.png?v=1649627691210">
-  <div class="calculator-grid">
-  
-  <div class="output">
-  <div data-previous-operand class="previous-operand"></div>
-  <div data-current-operand class="current-operand"></div>
-  </div>
-    
-  <button data-number id="one"><p class="hiddenText">1.1</p><img src="https://cdn.glitch.global/04acdea7-933d-42b4-b887-a53010fc0bc3/1.1.png?v=1649629304960"></button>
-  <button data-number id="two"><p class="hiddenText">2.3</p><img src="https://cdn.glitch.global/04acdea7-933d-42b4-b887-a53010fc0bc3/2.3.png?v=1649629308035"></button>
-  <button data-number id="three"><p class="hiddenText">3.6</p><img src="https://cdn.glitch.global/04acdea7-933d-42b4-b887-a53010fc0bc3/3.6.png?v=1649629316926"></button>
-  <button data-number id="four"><p class="hiddenText">4</p><img src="https://cdn.glitch.global/04acdea7-933d-42b4-b887-a53010fc0bc3/4.png?v=1649629320113"></button>
-  <button data-number id="five"><p class="hiddenText">5</p><img src="https://cdn.glitch.global/04acdea7-933d-42b4-b887-a53010fc0bc3/5.png?v=1649629322391"></button>
-  <button data-number id="six"><p class="hiddenText">6.1</p><img src="https://cdn.glitch.global/04acdea7-933d-42b4-b887-a53010fc0bc3/6.1.png?v=1649629324438"></button>
-  <button data-number id="seven"><p class="hiddenText">8</p><img src="https://cdn.glitch.global/04acdea7-933d-42b4-b887-a53010fc0bc3/8.png?v=1649629329655"></button>
-  <button data-number id="eight"><p class="hiddenText">8.3</p><img src="https://cdn.glitch.global/04acdea7-933d-42b4-b887-a53010fc0bc3/8.3.png?v=1649629327367"></button>
-  <button data-number id="nine"><p class="hiddenText">9</p><img src="https://cdn.glitch.global/04acdea7-933d-42b4-b887-a53010fc0bc3/9.png?v=1649629332443"></button>
-  <button data-operation id="plus"><p class="hiddenText">+</p><img src="https://cdn.glitch.global/04acdea7-933d-42b4-b887-a53010fc0bc3/%2B.png?v=1649629340997"></button>
-  <button data-operation id="minus"><p class="hiddenText">-</p><img src="https://cdn.glitch.global/04acdea7-933d-42b4-b887-a53010fc0bc3/-.png?v=1649629346456"></button>
-  <button data-equals id="equals"><img src="https://cdn.glitch.global/04acdea7-933d-42b4-b887-a53010fc0bc3/%3D.png?v=1649629344432"></button>
-  <button data-all-clear id="ac"><img src="https://cdn.glitch.global/04acdea7-933d-42b4-b887-a53010fc0bc3/AC.png?v=1649629334567"></button>
-  <img id="soundWaves" src="https://cdn.glitch.global/04acdea7-933d-42b4-b887-a53010fc0bc3/speakerNoise.png?v=1649629370195">
-          
-  </div>
-</div>
-      
+    <script src="script.js" defer></script>
+
+    <div class="calculatorContainer">
+      <img
+        class="calculatorBase"
+        src="https://cdn.glitch.global/04acdea7-933d-42b4-b887-a53010fc0bc3/calculatorBase.png?v=1649627691210"
+      />
+
+      <div class="calculator-grid">
+
+        <div class="output">
+          <div data-previous-operand class="previous-operand"></div>
+          <div data-current-operand class="current-operand"></div>
+        </div>
+
+        <button data-number id="one">
+          <p class="hiddenText">1.1</p>
+          <img
+            src="https://cdn.glitch.global/04acdea7-933d-42b4-b887-a53010fc0bc3/1.1.png?v=1649629304960"
+          />
+        </button>
+        <button data-number id="two">
+          <p class="hiddenText">2.3</p>
+          <img
+            src="https://cdn.glitch.global/04acdea7-933d-42b4-b887-a53010fc0bc3/2.3.png?v=1649629308035"
+          />
+        </button>
+        <button data-number id="three">
+          <p class="hiddenText">3.6</p>
+          <img
+            src="https://cdn.glitch.global/04acdea7-933d-42b4-b887-a53010fc0bc3/3.6.png?v=1649629316926"
+          />
+        </button>
+        <button data-number id="four">
+          <p class="hiddenText">4</p>
+          <img
+            src="https://cdn.glitch.global/04acdea7-933d-42b4-b887-a53010fc0bc3/4.png?v=1649629320113"
+          />
+        </button>
+        <button data-number id="five">
+          <p class="hiddenText">5</p>
+          <img
+            src="https://cdn.glitch.global/04acdea7-933d-42b4-b887-a53010fc0bc3/5.png?v=1649629322391"
+          />
+        </button>
+        <button data-number id="six">
+          <p class="hiddenText">6.1</p>
+          <img
+            src="https://cdn.glitch.global/04acdea7-933d-42b4-b887-a53010fc0bc3/6.1.png?v=1649629324438"
+          />
+        </button>
+        <button data-number id="seven">
+          <p class="hiddenText">8</p>
+          <img
+            src="https://cdn.glitch.global/04acdea7-933d-42b4-b887-a53010fc0bc3/8.png?v=1649629329655"
+          />
+        </button>
+        <button data-number id="eight">
+          <p class="hiddenText">8.3</p>
+          <img
+            src="https://cdn.glitch.global/04acdea7-933d-42b4-b887-a53010fc0bc3/8.3.png?v=1649629327367"
+          />
+        </button>
+        <button data-number id="nine">
+          <p class="hiddenText">9</p>
+          <img
+            src="https://cdn.glitch.global/04acdea7-933d-42b4-b887-a53010fc0bc3/9.png?v=1649629332443"
+          />
+        </button>
+        <button data-operation id="plus">
+          <p class="hiddenText">+</p>
+          <img
+            src="https://cdn.glitch.global/04acdea7-933d-42b4-b887-a53010fc0bc3/%2B.png?v=1649629340997"
+          />
+        </button>
+        <button data-operation id="minus">
+          <p class="hiddenText">-</p>
+          <img
+            src="https://cdn.glitch.global/04acdea7-933d-42b4-b887-a53010fc0bc3/-.png?v=1649629346456"
+          />
+        </button>
+        <button data-equals id="equals">
+          <img
+            src="https://cdn.glitch.global/04acdea7-933d-42b4-b887-a53010fc0bc3/%3D.png?v=1649629344432"
+          />
+        </button>
+        <button data-all-clear id="ac">
+          <img
+            src="https://cdn.glitch.global/04acdea7-933d-42b4-b887-a53010fc0bc3/AC.png?v=1649629334567"
+          />
+        </button>
+        <img
+          id="soundWaves"
+          src="https://cdn.glitch.global/04acdea7-933d-42b4-b887-a53010fc0bc3/speakerNoise.png?v=1649629370195"
+        />
+      </div>
+    </div>
   </body>
-  
-  
-  
 </html>

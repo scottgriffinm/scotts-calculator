@@ -1,12 +1,11 @@
-.headingArt {
-  position:relative;
-  top: 30%;
-  left: 50%;
-}
 
-.headingArt img {
-  height: 40%;
-  width: 40%;
+
+.headingArt {
+  position:absolute;
+  top: 0%;
+  left:0%;
+  height: 20%;
+  width:20%;
 }
 
 .calculatorContainer {
@@ -19,7 +18,7 @@
 }
 
 .calculatorBase {
-  position:relative;
+  position:absolute;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -47,13 +46,6 @@
 .output div {
   display:inline-block;
 }
-.prevous-operand {
-  
-}
-.current-operand {
-  
-}
-
 
 button {
   background-color: transparent;
