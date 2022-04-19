@@ -23,6 +23,8 @@ var boopsNBeeps = [new Audio('https://cdn.glitch.global/04acdea7-933d-42b4-b887-
 let allButtons = Array.from(numberButtons)
 allButtons = allButtons.concat(Array.from(operationButtons), equalsButton, allClearButton)
 
+
+
 class CalcButton {
   constructor(button, audio) {
     this.button = button;
