@@ -7,8 +7,19 @@ body {
   font-family: 'CalculatorFont', sans-serif;
 }
 
+.logoWrapper {
+  position:relative;
+  display:inline-block;
+  
+}
+
+.logoWrapper img {
+  
+  
+}
+
 .topText p {
-  position: relatice;
+  position: relative;
   display: inline-block;
   padding-left:1em;
   padding-right:1em;
@@ -18,7 +29,7 @@ body {
   position: relative;
   display: inline-block;
   zoom:1;
-  top: 50%;
+  top: 55%;
   left: 50%;  
   transform: translate(-50%, -50%);
 }
@@ -136,7 +147,7 @@ button {
 
 #musicPlayer {
   position:absolute;
-  top:10%;
+  top:15%;
   left:75%;
   
 }
@@ -145,12 +156,12 @@ button {
   position:absolute;
   top:10%;
   left:0%;
-  height:100%;
+  height:90%;
   width:100%;
 }
 
 #kidDancing {
   height:100%;
   width:100%;
-  opacity:1;
+  opacity:0;
 }
