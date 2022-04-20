@@ -134,20 +134,23 @@ button {
   opacity:0;
 }
 
-/* play music button */
-#playMusic {
-  top:20%;
-  left: 70%;
-}
-
-#playMusic img {
-  height:50%;
-  width:50%;
-}
-
 #musicPlayer {
   position:absolute;
   top:10%;
   left:75%;
   
+}
+
+#kidDancingContainer {
+  position:absolute;
+  top:10%;
+  left:0%;
+  height:100%;
+  width:100%;
+}
+
+#kidDancing {
+  height:100%;
+  width:100%;
+  opacity:1;
 }

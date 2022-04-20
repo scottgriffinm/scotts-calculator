@@ -179,5 +179,8 @@ allClearButton.addEventListener('click', button => {
 var aud = document.getElementById("musicPlayer");
 var kidDancing = document.getElementById("kidDancing");
 aud.onplay = function() {
-  kidDancing.style.opacity = 
+  kidDancing.style.opacity = 0;
 };
+aud.onpause = function() {
+  kidDancing.style.opacity = 1;
+}
