@@ -178,6 +178,17 @@ allClearButton.addEventListener('click', button => {
 playMusicButton.button.onmousedown = function () {sizeImg(playMusicButton.button.querySelectorAll('img')[0])}
 playMusicButton.button.onmouseup = function() {resetImg(playMusicButton.button.querySelectorAll('img')[0])}
 
+function partyLights(musicPlaying, element) {
+  if (musicPlaying) {
+    for (var iii=1000000; iii>100;iii--) {
+      document.getElementByTagName('body')[0].style.backgroundColor = iii.toString();
+    }
+  else {
+      document.getElementByTagName('body')[0].style.backgroundColor = iii.toString();
+  }
+  }
+}
+
 var musicPlaying = false
 playMusicButton.button.onclick = function() {
   if (!musicPlaying) {

@@ -1,3 +1,7 @@
+body {
+  background-color:1000000;
+}
+
 .topText {
   position:absolute;
   font-family: 'CalculatorFont', sans-serif;
