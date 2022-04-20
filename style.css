@@ -5,8 +5,10 @@ body {
 .topText {
   position:absolute;
   font-family: 'CalculatorFont', sans-serif;
+  top:3%;
   bottom:90%;
   right:0%;
+  left:17%;
 }
 
 #logoWrapper {
@@ -36,9 +38,7 @@ body {
   display: inline-block;
   zoom:1;
   top: 55%;
-  left: 50%; 
-  height:80%;
-  width:60%;
+  left: 50%;  
   transform: translate(-50%, -50%);
 }
 
@@ -47,8 +47,6 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  height:100%;
-  width:100%;
 }
 
 @font-face {
@@ -74,14 +72,6 @@ body {
   display:inline-block;
 }
 
-.buttonWrapper {
-  position:absolute;
-  top:0%;
-  bottom:0%;
-  left:5%;
-  right:5%;
-}
-
 button {
   background-color: transparent;
   border: none;
@@ -90,12 +80,6 @@ button {
   top:0;
   left:0;
 }
-
-button img {
-  height:100%;
-  width:100%;
-}
-
 
 /* Calculator number buttons (9 in total) */
 #one {
