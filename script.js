@@ -175,27 +175,9 @@ allClearButton.addEventListener('click', button => {
   calculator.updateDisplay()
 })  
 
-playMusicButton.button.onmousedown = function () {sizeImg(playMusicButton.button.querySelectorAll('img')[0])}
-playMusicButton.button.onmouseup = function() {resetImg(playMusicButton.button.querySelectorAll('img')[0])}
-
-function partyLights(musicPlaying, element) {
-  if (musicPlaying) {
-    for (var iii=1000000; iii>100;iii--) {
-      document.getElementByTagName('body')[0].style.backgroundColor = iii.toString();
-    }
-  else {
-      document.getElementByTagName('body')[0].style.backgroundColor = iii.toString();
-  }
-  }
-}
-
-var musicPlaying = false
-playMusicButton.button.onclick = function() {
-  if (!musicPlaying) {
-    playMusicButton.audio.play();
-    musicPlaying = true;}
-  else {
-    playMusicButton.audio.pause();
-    musicPlaying = false;
-  } 
-}
+/* audio event - kid dancing */
+var aud = document.getElementById("musicPlayer");
+var kidDancing = document.getElementById("kidDancing");
+aud.onplay = function() {
+  kidDancing.style.opacity = 
+};
