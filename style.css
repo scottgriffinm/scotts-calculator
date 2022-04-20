@@ -140,3 +140,10 @@ button {
   height:50%;
   width:50%;
 }
+
+#musicPlayer {
+  position:absolute;
+  top:10%;
+  left:75%;
+  
+}
