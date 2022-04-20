@@ -5,16 +5,16 @@ body {
 .topText {
   position:absolute;
   font-family: 'CalculatorFont', sans-serif;
-  bottom:90%;
+  bottom:85%;
 }
 
 #logoWrapper {
-  position:relative;
-  display:inline-block;
+  position:absolute;
   text-align: center;
   padding-left:1em;
   padding-right:1em;
   width:10em;
+  
 }
 
 #logoWrapper img {
@@ -27,6 +27,8 @@ body {
   display: inline-block;
   padding-left:1em;
   padding-right:1em;
+  padding-bottom:2em;
+  
 }
 
 .calculatorContainer {
